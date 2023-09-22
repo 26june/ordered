@@ -12,15 +12,15 @@ const Container = styled.div`
 export default function Task({ task, index }) {
   return (
     <Draggable draggableId={task.id} index={index}>
-      {(provided) => {
+      {(provided) => (
         <Container
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
           {task.content}
-        </Container>;
-      }}
+        </Container>
+      )}
     </Draggable>
   );
 }
