@@ -1,4 +1,3 @@
-import initialData from "./components/inital-data";
 import Home from "./components/Home";
 import styled from "styled-components";
 
