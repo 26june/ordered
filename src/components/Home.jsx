@@ -6,8 +6,22 @@ import initialData from "./inital-data";
 export default function Home() {
   const [initState, setInitState] = useState(initialData);
 
-  function handleOnDragEnd(params) {
-    //
+  function handleOnDragEnd(result) {
+    const { destination, source, draggableId } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const dragEndCol = initState.columns[source.droppableId];
+    console.log(dragEndCol);
   }
 
   return (
