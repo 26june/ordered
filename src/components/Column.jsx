@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Task from "./Task";
 
 const Container = styled.div`
-  margin: 8px;
   border: 1px solid black;
   border-radius: 2px;
 `;
